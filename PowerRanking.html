@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width">
         <title>Y.O.L.O - Power Ranking</title>
         <link rel="stylesheet" href="style.css">
+        <script src="Scripts.js" ></script>
     </head>
     <body style="background-color: #710773;">
         <img src="Images/Logo_Napis_clean.png" class="Logo">
@@ -18,5 +19,15 @@
         <li> <a href="Yomi.html">YOMI</a></li>
         </ul>
     </nav>
+    <div class="tabs">
+        <div class="tab active" onclick="openTab(event, 'tab1')">Season Ranking</div>
+        <div class="tab" onclick="openTab(event, 'tab2')">Global Ranking</div>
+    </div>
+    <div id="tab1" class="tab-content active">
+        Season Ranking
+    </div>
+    <div id="tab2" class="tab-content">
+        Global Ranking
+    </div>
     </body>
 </html>
