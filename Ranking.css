@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Glitch';
+    src: url(Fonts/GlitchGoblin-2O87v.ttf);
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+    width: auto;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 5px;
+  }
+
+td {
+    padding: 10px;
+    font-size: large;
+    color: #F2E638;
+    padding: 10px 30px;
+    text-align: center;
+}
+
+th{
+    font-family: 'Glitch'; 
+    font-size: large;
+    color: #F2E638; 
+    padding: 10px 30px;
+    text-align: center;
+
+}
+
+
+.player-card {
+display: none;
+position: absolute;
+left: -210px;
+top: 0;
+width: 200px;
+border: 1px solid #aaa;
+padding: 10px;
+z-index: 1;
+box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+font-family: 'Roboto', sans-serif;
+background-color: #270373;
+}
+td .player-card:hover{
+    background-color: #270373;
+    border-radius: 15px;
+}

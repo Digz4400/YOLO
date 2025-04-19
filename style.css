@@ -1,3 +1,8 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 @font-face {
     font-family: 'Glitch';
     src: url(Fonts/GlitchGoblin-2O87v.ttf);
@@ -44,47 +49,53 @@ text-align: center;
     margin-bottom: 10px;
     cursor: pointer;
     justify-content: center;
+    border: none;
   }
 
-  .tab {
-    text-decoration: none;
-    padding: 15px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 15px;
-    font-family: 'Glitch';
-    font-size: large;
-    color: #F2E638;
+.tab {
+  text-decoration: none;
+  padding: 15px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  font-family: 'Glitch';
+  font-size: large;
+  color: #F2E638;
+  border: none;
 
-  }
+}
 
-  .tab.active {
-    background-color: #270373;
-    border-bottom: none;
-  }
+.tab.active {
+  background-color: #270373;
+  border-bottom: none;
+}
 
-  .tab-content {
-    display: none;
-    border: 1px solid #F2E638;
-    padding: 10px;
-  }
+.tab-content {
+  display: none;
+  --border: 1px solid #F2E638;
+  padding: 10px;
+}
 
-  .tab-content.active {
-    display: block;
-  }
+.tab-content.active {
+  display: block;
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-  td, th {
-    border: 1px solid #F2E638;
-    padding: 8px;
-  }
+td, th {
+  border: 1px solid #F2E638;
+  padding: 8px;
+}
 
-  .tabs_logos{
-    display: flex;
-    text-align: left;
-    width: 10%;
-  }
+.tabs_logos{
+  display: inline-flex;
+  width: 5%;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+}
