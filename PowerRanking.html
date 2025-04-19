@@ -8,6 +8,35 @@
         <link rel="stylesheet" href="style.css">
         <script src="Scripts.js" ></script>
     </head>
+    <style>
+        table {
+    border-collapse: separate;
+    border-spacing: 5px;
+    margin: auto;
+    width: auto;
+    height: auto;
+    border: none;
+  }
+
+td {
+    padding: 10px;
+    font-size: large;
+    color: #F2E638;
+    padding: 10px 30px;
+    text-align: center;
+    border: none;
+}
+
+th{
+    font-family: 'Glitch'; 
+    font-size: large;
+    color: #F2E638; 
+    padding: 10px 30px;
+    text-align: center;
+    border: none;
+
+}
+    </style>
     <body style="background-color: #710773;">
         <img src="Images/Logo_Napis_clean.png" class="Logo">
         <nav class="navbar">
@@ -24,10 +53,23 @@
         <div class="tab" onclick="openTab(event, 'tab2')">Global Ranking</div>
     </div>
     <div id="tab1" class="tab-content active">
+        <table>
+            <tr>
+              <th>Gracz</th>
+              <th>ELO</th>
+        </tr>
+        </table>
         <iframe src="SeasonRanking.html" width="auto" height="auto" style="border:none;"></iframe>
     </div>
     <div id="tab2" class="tab-content">
+        <table>
+            <tr>
+              <th>Gracz</th>
+              <th>ELO</th>
+        </tr>
+        </table>
         <iframe src="GlobalRanking.html" width="auto" height="auto" style="border:none;"></iframe>
+        
     </div>
     </body>
 </html>

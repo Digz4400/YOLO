@@ -3,19 +3,24 @@
     src: url(Fonts/GlitchGoblin-2O87v.ttf);
 }
 
+body {
+    overflow: auto;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
 table {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-collapse: collapse;
-    width: auto;
-    margin: auto;
     border-collapse: separate;
     border-spacing: 5px;
+    margin: auto;
+    width: auto;
+    height: auto;
   }
 
 td {
-    padding: 10px;
+    --padding: 10px;
     font-size: large;
     color: #F2E638;
     padding: 10px 30px;
@@ -26,7 +31,7 @@ th{
     font-family: 'Glitch'; 
     font-size: large;
     color: #F2E638; 
-    padding: 10px 30px;
+    --padding: 10px 30px;
     text-align: center;
 
 }
@@ -49,3 +54,14 @@ td .player-card:hover{
     background-color: #270373;
     border-radius: 15px;
 }
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+  }
