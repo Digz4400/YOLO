@@ -1,15 +1,44 @@
 function openTab(evt, tabId) {
-    const tabs = document.querySelectorAll('.tab');
-    const contents = document.querySelectorAll('.tab-content');
-    tabs.forEach(tab => tab.classList.remove('active'));
-    contents.forEach(c => c.classList.remove('active'));
-    evt.currentTarget.classList.add('active');
-    document.getElementById(tabId).classList.add('active');
-  }
+  const tabs = document.querySelectorAll('.tab');
+  const contents = document.querySelectorAll('.tab-content');
+  tabs.forEach(tab => tab.classList.remove('active'));
+  contents.forEach(c => c.classList.remove('active'));
+  evt.currentTarget.classList.add('active');
+  document.getElementById(tabId).classList.add('active');
+}
 
-  window.addEventListener('message', function(event) {
-    if (event.origin === 'http://twoja-domena.com') { // Sprawdź, czy wiadomość pochodzi z właściwej domeny
-      const iframe = document.getElementById('mojeIframe');
-      iframe.style.height = event.data + 'px'; // Ustawiamy wysokość iframe na wartość z wiadomości
-    }
-  });
+let isDragging = false;
+let offsetX = 0, offsetY = 0;
+let currentImg = null;
+
+document.addEventListener('mousedown', (e) => {
+  if (e.target.classList.contains('Bracket')) {
+    isDragging = true;
+    currentImg = e.target;
+    const rect = currentImg.getBoundingClientRect();
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
+    currentImg.style.cursor = 'grabbing';
+  }
+});
+
+document.addEventListener('mouseup', () => {
+  isDragging = false;
+  if (currentImg) {
+    currentImg.style.cursor = 'grab';
+    currentImg = null;
+  }
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (isDragging && currentImg) {
+    const container = currentImg.parentElement;
+    const containerRect = container.getBoundingClientRect();
+
+    let x = e.clientX - containerRect.left - offsetX;
+    let y = e.clientY - containerRect.top - offsetY;
+
+    currentImg.style.left = `${x}px`;
+    currentImg.style.top = `${y}px`;
+  }
+});
