@@ -1,6 +1,6 @@
 function showModal(button) {
-    document.getElementById('modalText').textContent = `Random Text`;
-    document.getElementById('myModal').style.display = 'flex';
+    //document.getElementById('modalText').textContent = `Random Text`;
+    //document.getElementById('myModal').style.display = 'flex';
   }
   
   function closeModal() {

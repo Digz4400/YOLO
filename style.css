@@ -118,7 +118,11 @@ iframe {
   height: 80vh; /* 80% wysokości ekranu */
   border: none;
   position: relative;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+#bracketdiv::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 .Bracket {
   width: auto;
