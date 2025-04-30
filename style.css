@@ -19,6 +19,10 @@ iframe {
     font-family: 'Glitch';
     src: url(Fonts/GlitchGoblin-2O87v.ttf);
 }
+@font-face {
+  font-family: 'Felix';
+  src: url(Fonts/felixtitlingmt.ttf);
+}
 h1{
 text-align: center;
 }
@@ -130,7 +134,30 @@ iframe {
   max-width: none;
   max-height: none;
   position: absolute;
-  left: 0;
+  left:0;
   top: 0;
   cursor: grab;
+  --transform: scale(0.7);
+}
+
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scrolling-image {
+  display: flex;
+  animation: scroll-left 20s linear infinite;
+  width: max-content;
+}
+
+.scrolling-image img {
+  height: 100px; /* lub width: 200px; */
+  display: inline-block;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
